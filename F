@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+	int a,b;
+	scanf ("%i",&a);
+	b=a%2;
+	if (b==0){
+		printf ("Par");
+	}	else {
+		printf ("Impar");
+	}
+	return 0;
+}
