@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+int main(int argc, char *argv[]) {
+	char txt[10000];
+	int I,F,d=0;
+	for(e=0;e<10000;e++){
+		txt[e]='-';
+	}
+	scanf("%d %d",&I,&F);	
+	fflush(stdin);
+	scanf("%[^\n]",&txt[0]);
+	for(int e=0;e<10000;e++){
+		if(txt[e]!='-'){
+			d++;
+		}
+	}
+	d=d-1;
+	for(int e=0;e<d;e++){
+		if(e==I){
+			for(int e=F;e>=I;e--){
+				printf("%c",txt[e]);
+			}
+			e=F+1;
+		}
+		printf("%c",txt[e]);
+	}
+	return 0;
+}
