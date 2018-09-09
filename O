@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(int argc, char *argv[]){
+	int j,n;
+	scanf("%i",&n);
+	struct a{
+		int p;
+	}a[n];
+	for(int i=0;i<n;i++){
+		scanf("%i",&a[i].p);
+	}
+	j=0;
+	int con=0;
+	do{
+		if(a[0].p > a[j].p)
+			con++;
+		j++;
+	}while(j!=n);
+	printf("%i",con);
+	return 0; 
+}
