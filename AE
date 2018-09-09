@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(){
+	int C,N,fila[10000];
+	char a;
+	scanf("%i %i",&C,&N);
+	int Total=0;
+	int nlugar=0;
+	while(N!=0){
+		scanf("%c",&a);
+		switch(a){
+		case 'N':
+			scanf("%i",&fila[nlugar]);
+			fila[nlugar]++;
+			nlugar++;
+			Total++;
+			N--;
+			break;
+		case 'A':
+			C=C-fila[0];
+			for(int j=0;j<(Total-1);j++){
+				fila[j]=fila[j+1];
+			}
+			Total--;
+			nlugar--;
+			N--;
+			break;
+		case 'C':
+			printf("%i\n",Total);
+			N--;
+			break;
+		case 'R':
+			printf("%i\n",C);	
+			N--;
+			break;
+		}       
+	}
+	return 0;
+}
